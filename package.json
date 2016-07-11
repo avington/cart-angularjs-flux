@@ -18,7 +18,9 @@
     "gulp": "^3.9.1",
     "gulp-debug": "^2.1.2",
     "gulp-inject": "^4.1.0",
+    "gulp-sass": "^2.3.2",
     "gulp-typescript": "^2.13.6",
+    "node-sass": "^3.8.0",
     "typescript": "^1.8.10",
     "typings": "^1.3.1"
   }

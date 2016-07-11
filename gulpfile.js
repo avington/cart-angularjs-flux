@@ -3,6 +3,14 @@ const debug = require('gulp-debug');
 const ts = require('gulp-typescript');
 const inject = require('gulp-inject');
 const browserSync = require('browser-sync').create();
+const scss = require('gulp-sass');
+
+gulp.task('scss', function() {
+    gulp.src('./src/sass/main.scss')
+        .pipe(debug())
+        .pipe(scss())
+        .pipe(gulp.dest('./src/css/'));
+});
 
 gulp.task('tsc', function () {
     const tsProject = ts.createProject('tsconfig.json');
@@ -31,6 +39,7 @@ gulp.task('ts-reload', ['tsc'], () => {
     browserSync.reload()
 });
 
+
 gulp.task('dev', ['tsc', 'inject'], () => {
     browserSync.init({
         server: {
@@ -40,5 +49,7 @@ gulp.task('dev', ['tsc', 'inject'], () => {
     });
 
     gulp.watch('./src/app/**/*.ts', ['ts-reload']);
+
+    gulp.watch('./src/**/*.scss', ['scss']);
 
 });

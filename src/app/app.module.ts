@@ -10,8 +10,8 @@ module app {
                 url: '/',
                 controller: function(){},
                 controllerAs: '$ctrl',
-                template: `<div>
-                    <product-list></cart-product>
+                template: `<div class="default-container">
+                    <product-list></product-list>
                     <cart-product-list></cart-product-list>
                 </div>`
             });

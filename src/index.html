@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/css/main.css">
+</head>
+<body>
+    
+    <ui-view></ui-view>
+
+    <script src="/node_modules/angular/angular.js"></script>
+    <script src="/node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <!-- inject:js -->
+    <script src="/src/app/app.module.js"></script>
+    <script src="/src/app/components/cart-product-list.component.js"></script>
+    <script src="/src/app/components/product-list.component.js"></script>
+    <script src="/src/app/services/product-data.service.js"></script>
+    <!-- endinject -->
+</body>
+</html>
