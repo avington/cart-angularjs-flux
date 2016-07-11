@@ -1,5 +1,8 @@
 @import '../helpers/variables';
 
 .default-container {
-    display: flex; 
+    display: flex;
+    .flex-container {
+        flex: 1;
+    } 
 }

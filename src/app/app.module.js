@@ -9,7 +9,7 @@ var app;
             url: '/',
             controller: function () { },
             controllerAs: '$ctrl',
-            template: "<div class=\"default-container\">\n                    <product-list></product-list>\n                    <cart-product-list></cart-product-list>\n                </div>"
+            template: "<div class=\"default-container\">\n                    <div class=\"flex-container\">\n                        <product-list></product-list>\n                    </div>\n                    <div class=\"flex-container\">\n                        <cart-product-list></cart-product-list>\n                    </div>\n                    \n                    \n                </div>"
         });
         $urlRouterProvider.otherwise('/');
     });

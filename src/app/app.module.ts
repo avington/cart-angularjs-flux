@@ -11,8 +11,14 @@ module app {
                 controller: function(){},
                 controllerAs: '$ctrl',
                 template: `<div class="default-container">
-                    <product-list></product-list>
-                    <cart-product-list></cart-product-list>
+                    <div class="flex-container">
+                        <product-list></product-list>
+                    </div>
+                    <div class="flex-container">
+                        <cart-product-list></cart-product-list>
+                    </div>
+                    
+                    
                 </div>`
             });
 

@@ -372,5 +372,13 @@ textarea {
 body {
   font-family: 'Roboto Condensed', sans-serif; }
 
+li {
+  list-style: none; }
+
 .default-container {
   display: flex; }
+  .default-container .flex-container {
+    flex: 1; }
+
+.product-list li {
+  padding: 1em 1em 1em 1em; }

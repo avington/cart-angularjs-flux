@@ -9,7 +9,7 @@ var app;
                 var defer = _this.$q.defer();
                 _this.$http.get('http://services.odata.org/V4/Northwind/Northwind.svc/Products?$top=10')
                     .then(function (response) {
-                    defer.resolve(response.data);
+                    defer.resolve(response.data.value);
                 })
                     .catch(function (error) {
                     defer.reject(error);

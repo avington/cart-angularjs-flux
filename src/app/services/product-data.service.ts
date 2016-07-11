@@ -32,8 +32,8 @@ module app {
         getAll = () => {
             const defer = this.$q.defer();
             this.$http.get('http://services.odata.org/V4/Northwind/Northwind.svc/Products?$top=10')
-                .then((response) => {
-                    defer.resolve(response.data);
+                .then((response: any) => {
+                    defer.resolve(response.data.value);
                 })
                 .catch((error) => {
                     defer.reject(error);

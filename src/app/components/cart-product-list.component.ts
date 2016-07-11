@@ -1,11 +1,11 @@
 module app {
 
     const template: string = `
-        <div class="container">
+        <div>
             <h3>Shopping Cart</h3>
             <ul>
-                <li ng-repeat="item in $ctrl.cart track by item.ProductID">
-                    {{item.ProductName}}
+                <li ng-repeat="item in $ctrl.cartItems track by item.product.ProductID">
+                    {{item.product.ProductName}} - {{item.qty}}
                 </li>
             </ul>
         </div>
@@ -19,8 +19,22 @@ module app {
 
     class CartProductListController {
 
-        $onInit = () => {
+        static $inject: Array<string> = [
+            'cartStore'
+        ];
 
+        constructor(
+            private cartStore: ICartStore
+        ){}
+
+        cartItems: Array<ICartItem>;
+
+        $onInit = () => {
+            this.cartStore.addListener(() => this.resetItems());
+        }
+
+        resetItems = () => {
+            this.cartItems = this.cartStore.cartItems();
         }
     }
     
