@@ -4,3 +4,4 @@ logs
 coverage
 build
 dist
+.idea
