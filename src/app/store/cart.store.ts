@@ -29,8 +29,8 @@ module app {
             }
         }
 
-        emitChange() {
-            this.emit('change');
+        emitChange(event: IEvent) {
+            this.emit(event);
         }
 
     }

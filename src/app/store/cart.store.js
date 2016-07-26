@@ -20,8 +20,8 @@ var app;
                 items[0].qty += 1;
             }
         };
-        CartStoreService.prototype.emitChange = function () {
-            this.emit('change');
+        CartStoreService.prototype.emitChange = function (event) {
+            this.emit(event);
         };
         return CartStoreService;
     }(app.DispatcherService));

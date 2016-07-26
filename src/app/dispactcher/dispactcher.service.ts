@@ -6,7 +6,7 @@ module app {
     }
 
     export interface IDispatcherService {
-        emit: (event: string) => void;
+        emit: (event: IEvent) => void;
         addListener: (listenter: any) => number;
     }
 
@@ -14,7 +14,7 @@ module app {
 
         listeners: Array<any> = [];
         
-        emit = (event: string) => {
+        emit = (event: IEvent) => {
             this.listeners.forEach((listener) => {
                 listener(event);
             });
